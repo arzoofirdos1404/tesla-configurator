@@ -1,0 +1,60 @@
+
+<div style="margin-left: 2%;">
+<h1> Step 3: Summary</h1>
+<div>
+    <h3>Your Tesla {{modeldesc}}</h3>
+</div>
+
+    <div class="row">
+        <div class="col-6 mr-2" style="margin-right: 15%;">
+            {{selectedConfigs?.description}}
+        </div>
+        <div class="col-6">
+            {{selectedConfigs?.price | currency:'USD'}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            Range: {{selectedConfigs?.range}} miles - Max speed: {{selectedConfigs?.speed}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6" style="margin-right: 20%;">
+            {{getDescByColorCode(selectedColor,model)}} Color
+        </div>
+        <div class="col-6">
+            {{getPriceByColorCode(selectedColor,model) | currency:'USD'}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6" style="margin-right: 20%">
+            Tow Hitch Package
+        </div>
+        <div class="col-6">
+            $1,000.00
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6" style="margin-right: 20%">
+            Yoke Package
+        </div>
+        <div class="col-6">
+            $1,000.00
+        </div>
+    </div>
+
+<hr>
+<div class="row">
+    <div class="lcol-6" style="margin-right: 25%">
+            TOTAL COST
+    </div>
+    <div class="col-6">
+            {{getTotalCost() | currency:'USD'}}
+    </div>
+</div>
+<hr>    
+</div>

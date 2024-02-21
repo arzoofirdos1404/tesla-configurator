@@ -1,0 +1,40 @@
+
+nav {
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+  
+      li {
+        flex-grow: 1;
+        text-align: center;
+        position: relative;
+  
+        a {
+          display: block;
+          padding: 10px 20px; 
+          text-decoration: none;
+          background-color:e0e0e0; 
+          cursor: pointer;
+  
+          &:hover {
+            background-color: #e0e0e0;
+          }
+  
+          &.active {
+            background-color: #e0e0e0;
+          }
+          &:disabled {
+            opacity: 0.2;
+            pointer-events: none;
+          }
+        }
+  
+        &:last-child a {
+          border-right: none;
+        }
+      }
+    }
+  }
+  
